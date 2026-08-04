@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "app/billing/page.jsx", "app/inventory/page.jsx","components/layout/TopBar.jsx", "components/ui/DateTimeCard.jsx", "components/layout/SideBar.jsx", "app/layout.jsx", "app/sales-report/page.jsx", "app/item-request/page.jsx"  ],
   "exclude": ["node_modules"]
 }
