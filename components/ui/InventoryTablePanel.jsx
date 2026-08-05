@@ -9,7 +9,7 @@ export default function InventoryTablePanel({items}) {
 
     }
     return (
-        <div className="card">
+        <div className="tabel-panel card ">
             <div className="table-toolbar">
                 <div className="table-info">
                     <h3>Inventory List</h3>
@@ -26,7 +26,7 @@ export default function InventoryTablePanel({items}) {
             <InventoryTable
             items={items}
             />
-            This is fromInventory Table
+            
         </div>
     )
 }

@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model inventory_table {
+  id           Int      @id @default(autoincrement())
+  name         String   @db.VarChar(100)
+  image        String
+  category     String   @db.VarChar(50)
+  description  String?
+  supplier     String?  @db.VarChar(100)
+  price        Decimal  @db.Decimal(10, 2)
+  unit         String   @db.VarChar(20)
+  purchased    Int
+  sold         Int
+  stock        Int
+  last_updated DateTime @db.Timestamp(6)
+}

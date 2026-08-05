@@ -194,7 +194,9 @@ button:hover {
 }
 
 /* -----------------------------table toolbar------------------------------ */
-
+.tabel-panel{
+    padding: 16px;
+}
 .table-toolbar {
     display: flex;
     align-items: center;
@@ -228,4 +230,25 @@ button:hover {
 .export-button{
     border: 1px solid rgba(0, 0, 255, 0.575);
     color: blue;
+}
+
+/* ------------------------------------------------Table---------------------------------------------- */
+
+.table-wrapper{
+    overflow-x: auto;
+    border-radius: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background: #f9faff;
+  padding: 18px;
+}
+
+tbody td {
+  border-top: 1px solid #f1f1f4;
 }
