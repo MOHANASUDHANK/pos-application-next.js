@@ -1,4 +1,5 @@
 import { db } from "@/lib/db";
+import { update } from "@/services/inventory";
 import { NextResponse } from "next/server";
 
 export async function GET(
@@ -32,6 +33,29 @@ export async function GET(
     console.error("Database query error:", error);
     return NextResponse.json(
       { error: "Failed to fetch inventory item" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function PUT(
+  request: Request,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  try {
+    const { id } = await params;
+    const itemId = parseInt(id, 10);
+    if (isNaN(itemId)) {
+      return NextResponse.json({ error: "Invalid ID" }, { status: 400 });
+    }
+
+    const body = await request.json();
+    const updatedItem = await update(itemId, body);
+    return NextResponse.json({ item: updatedItem }, { status: 200 });
+  } catch (error) {
+    console.error("Database update error:", error);
+    return NextResponse.json(
+      { error: "Failed to update inventory item" },
       { status: 500 }
     );
   }

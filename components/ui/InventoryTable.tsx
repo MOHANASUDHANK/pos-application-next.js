@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-function getStatusClass(status){
+function getStatusClass(status:string){
     switch(status){
         case "In Stock":
             return "greenBadge";
@@ -11,7 +11,7 @@ function getStatusClass(status){
     }
 }
 
-export default function InventoryTable({items}){
+export default function InventoryTable({items}:{items:any}){
     return(<div className="tableWrapper">
         <table className="table">
             <thead>
@@ -29,7 +29,7 @@ export default function InventoryTable({items}){
             </tr>
             </thead>
             <tbody>
-                   {items.map((item,id)=>(
+                   {items.map((item:any,id:number)=>(  
                     <tr key={item.id}>
                         <td>
                             <Image

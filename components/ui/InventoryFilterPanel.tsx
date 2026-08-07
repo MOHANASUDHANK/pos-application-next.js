@@ -7,7 +7,7 @@ import FilterButton from "./FilterButton";
 import ResetButton from "./ResetButton";
 
 const options = ["a", "b", "C"];
-export default function InventoryFilterPanel({ onFilter, onReset }) {
+export default function InventoryFilterPanel({ onFilter, onReset }:{onFilter:Function,onReset:Function}) {
     const [category, setCategory] = useState(options[0]);
     const [itemName, setItemName] = useState(options[0]);
     const [status, setStatus] = useState(options[0]);
@@ -20,29 +20,29 @@ export default function InventoryFilterPanel({ onFilter, onReset }) {
                 label="Category"
                 value={category}
                 options={options}
-                onChange={(value) => { setCategory(value); console.log(value) }}
+                onChange={(value :string):void => { setCategory(value); console.log(value) }}
             />
             <SelectFilter
                 label="Item Name"
                 value={itemName}
                 options={options}
-                onChange={(value) => { setItemName(value); console.log(value) }}
+                onChange={(value:string):void => { setItemName(value); console.log(value) }}
             />
             <SelectFilter
                 label="Status"
                 value={status}
                 options={options}
-                onChange={(value) => { setStatus(value); console.log(value) }}
+                onChange={(value:string):void => { setStatus(value); console.log(value) }}
             />
             <DateFilter
                 label="Date From"
                 value={dateFrom}
-                onChange={(value) => { setDateFrom(value); console.log(value) }}
+                onChange={(value:string):void => { setDateFrom(value); console.log(value) }}
             />
             <DateFilter
                 label="Date To"
                 value={dateTo}
-                onChange={(value) => { setDateTo(value); console.log(value) }}
+                onChange={(value:string):void => { setDateTo(value); console.log(value) }}
             />
             <div className="filter-reset-buttons">
                 <FilterButton />

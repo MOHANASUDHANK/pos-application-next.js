@@ -29,6 +29,7 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "app/billing/page.jsx", "app/inventory/page.jsx","components/layout/TopBar.jsx", "components/ui/DateTimeCard.jsx", "components/layout/SideBar.jsx", "app/layout.jsx", "app/sales-report/page.jsx", "app/item-request/page.jsx"  ],
+, "app/billing/page.tsx", "app/inventory/page.tsx","components/layout/TopBar.tsx", "components/ui/DateTimeCard.tsx", "components/layout/SideBar.tsx", "app/layout.tsx", "app/sales-report/page.tsx", "app/item-request/page.tsx"  ],
   "exclude": ["node_modules"]
+
 }
